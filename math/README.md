@@ -19,3 +19,14 @@ print(arr) # 약수 리스트
 print(len(arr)) # 약수의 갯수 
 ```
 
+### 소수 판별
+
+```python
+def is_prime_number(n):
+    for i in range(2,int(n**(1/2))+1):
+        if n % i ==0:
+          return False
+   return True
+```
+     
+  
