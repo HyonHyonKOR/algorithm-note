@@ -126,7 +126,7 @@ def is_prime_number(n):
 > N이 소수가 아니라면,  N보다 작은 소수나 √n보다 작은 소수가 존재한다(아마 소인수 관련 공부해야 할듯)<br>
 > 따라서 √n 이하의 소수로 나누어 떨어지지 않으면 그 수는 소수이다.
 
-### 소수 3 (여러 개의 소수 판별(for-break-else))
+### 소수 3 (여러 개의 소수 판별(flag, for-break-else))
 
 ```py
 loop = int(input())
@@ -141,6 +141,25 @@ for i in unchecked_list:
             break
     else: 
           prime_count += 1
+
+print(prime_count)
+```
+
+```py
+unchecked_list = list(map(int,input().split()))
+
+prime_count = 0
+for i in unchecked_list:
+    if i < 2:
+        continue
+    is_prime = True
+    for j in range(2,int(i**(1/2)+1)):
+        if i % j == 0:
+            is_prime = False
+            break
+
+    if is_prime:                 #소수로 판별되어 내부For문이 break가 되도, 밑에 있는 문장은 외부 For문이므로 반드시 실행됨. 
+        prime_count += 1         #그러므로 is_prime = False 로 플래그 변수를 만든다.
 
 print(prime_count)
 ```
