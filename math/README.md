@@ -15,7 +15,7 @@
 before_bin = int(input())
 
 after_bin =''
-while before_bin >= 1:
+while before_bin > 0:
     if before_bin % 2 ==0:
         after_bin += '0'
     else:
@@ -23,16 +23,11 @@ while before_bin >= 1:
 
     before_bin //= 2  
 
-
 after_bin = after_bin[::-1] 
 print(after_bin)
 ```
 
-
 > 물론 파이썬의 bin() 함수로 처리하면 0b(2진수) 결과가 반환되지만, 원리 공부를 위해 알고리즘으로 푼다<br>
-
-
-
 
 
 ### 약수 1 (기초 알고리즘)
