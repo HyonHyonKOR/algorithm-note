@@ -223,6 +223,14 @@ print(prime_count)
 ```
 
 
-### 소인수 
+### 팩토리얼(재귀)
+
+```py
+def factorial(n):
+  if n == 1:
+     return 1
+  while n!=0:
+     retrun n*factorial(n-1) 
      
-  
+```
+> 반드시 **if n==1 처럼 종료 조건을 만드는 것이 중요**하다.  
