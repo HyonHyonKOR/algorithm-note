@@ -139,6 +139,9 @@ for i in range(1,int(n**(1/2))+1):
 ### 최대공약수 (유클리드 호제법),  최소 공배수
 
 > 최소 공배수는 두 수의 곱을 최대 공약수로 나눈 수이다.
+>
+> <img width="1341" height="1196" alt="image" src="https://github.com/user-attachments/assets/210fa70e-5754-4a11-95ac-a9f46429f014" />
+
 
 ```py
 # a = 100 b =28 우선 a가 b보다 크다고 가정
@@ -154,6 +157,16 @@ def gcd(a,b):
 def lcm(a,b)
     return a * b / gcd(a,b)
 
+```
+
+```js
+function GCD(a, b) {
+   if (b === 0) {
+       return a; 
+   } else {
+       return GCD(b, a % b); 
+   }
+}
 ```
 
 
